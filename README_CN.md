@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## 1. 仓库结构
 > 所有notebook中的路径均为**相对路径**，基于仓库根目录。
-
+```
 ├── README.md                            ← 英文说明
 ├── README_CN.md                         ← 中文说明（本文件）
 ├── requirements.txt                     ← 依赖库列表
@@ -75,7 +75,7 @@ pip install -r requirements.txt
 ├── 5.2 Statistical analysis/
 ├── 5.4 Sensitivity analysis/
 └── 5.5 Ablation analysis/
-
+```
 ---
 
 ## 2. 计算环境

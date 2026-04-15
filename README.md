@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ## 1. Repository Structure
 > All file paths in the notebooks are **relative paths** based on the repository root directory.
-
+```
 ├── README.md
 ├── README_CN.md
 ├── requirements.txt
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ├── 5.2 Statistical analysis/
 ├── 5.4 Sensitivity analysis/
 └── 5.5 Ablation analysis/
-
+```
 ---
 
 ## 2. Computing Environment
