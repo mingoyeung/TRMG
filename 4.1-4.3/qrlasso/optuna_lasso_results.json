@@ -1,0 +1,463 @@
+{
+  "best_lambda": 9.909733546017952,
+  "best_loss": 892.5223520079547,
+  "total_time_sec": 35927.19782280922,
+  "study_name": "no-name-ee3b16c4-4d0b-4bfb-a7a5-03383cbe57d9",
+  "direction": "MINIMIZE",
+  "best_value": 892.5223520079547,
+  "best_params_study": {
+    "lambda": 9.909733546017952
+  },
+  "trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 894.2036238161638,
+      "params": {
+        "lambda": 3.7460266483547775
+      },
+      "datetime_start": "2026-02-02T23:53:58.719387",
+      "datetime_complete": "2026-02-03T00:13:49.103450",
+      "duration_sec": 1190.384063,
+      "user_attrs": {
+        "time": 1190.3829884529114
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 892.7002736842813,
+      "params": {
+        "lambda": 9.507192349792751
+      },
+      "datetime_start": "2026-02-03T00:13:49.107234",
+      "datetime_complete": "2026-02-03T00:33:17.789891",
+      "duration_sec": 1168.682657,
+      "user_attrs": {
+        "time": 1168.6818521022797
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 2,
+      "state": "COMPLETE",
+      "value": 893.361341820099,
+      "params": {
+        "lambda": 7.32020742417224
+      },
+      "datetime_start": "2026-02-03T00:33:17.793259",
+      "datetime_complete": "2026-02-03T00:53:33.302044",
+      "duration_sec": 1215.508785,
+      "user_attrs": {
+        "time": 1215.508250951767
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 3,
+      "state": "COMPLETE",
+      "value": 893.7109257162388,
+      "params": {
+        "lambda": 5.986986183486169
+      },
+      "datetime_start": "2026-02-03T00:53:33.305136",
+      "datetime_complete": "2026-02-03T01:14:15.829885",
+      "duration_sec": 1242.524749,
+      "user_attrs": {
+        "time": 1242.5242002010345
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 4,
+      "state": "COMPLETE",
+      "value": 895.3550866844196,
+      "params": {
+        "lambda": 1.5610303857839227
+      },
+      "datetime_start": "2026-02-03T01:14:15.832731",
+      "datetime_complete": "2026-02-03T01:32:32.358353",
+      "duration_sec": 1096.525622,
+      "user_attrs": {
+        "time": 1096.525081396103
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 5,
+      "state": "COMPLETE",
+      "value": 895.3545512644441,
+      "params": {
+        "lambda": 1.5607892088416901
+      },
+      "datetime_start": "2026-02-03T01:32:32.360947",
+      "datetime_complete": "2026-02-03T01:50:38.527656",
+      "duration_sec": 1086.166709,
+      "user_attrs": {
+        "time": 1086.166167974472
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 6,
+      "state": "COMPLETE",
+      "value": 895.6876737519003,
+      "params": {
+        "lambda": 0.5817780380698264
+      },
+      "datetime_start": "2026-02-03T01:50:38.530071",
+      "datetime_complete": "2026-02-03T02:07:54.647941",
+      "duration_sec": 1036.11787,
+      "user_attrs": {
+        "time": 1036.1174094676971
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 7,
+      "state": "COMPLETE",
+      "value": 892.8241379504541,
+      "params": {
+        "lambda": 8.661895281603577
+      },
+      "datetime_start": "2026-02-03T02:07:54.650999",
+      "datetime_complete": "2026-02-03T02:28:23.886433",
+      "duration_sec": 1229.235434,
+      "user_attrs": {
+        "time": 1229.2346880435944
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 8,
+      "state": "COMPLETE",
+      "value": 893.6558862412268,
+      "params": {
+        "lambda": 6.011549002420345
+      },
+      "datetime_start": "2026-02-03T02:28:23.889610",
+      "datetime_complete": "2026-02-03T02:49:07.127506",
+      "duration_sec": 1243.237896,
+      "user_attrs": {
+        "time": 1243.237363576889
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 9,
+      "state": "COMPLETE",
+      "value": 893.3630950716878,
+      "params": {
+        "lambda": 7.08101770538266
+      },
+      "datetime_start": "2026-02-03T02:49:07.130646",
+      "datetime_complete": "2026-02-03T03:08:59.282854",
+      "duration_sec": 1192.152208,
+      "user_attrs": {
+        "time": 1192.151700258255
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 10,
+      "state": "COMPLETE",
+      "value": 892.6333376583951,
+      "params": {
+        "lambda": 9.794968951347801
+      },
+      "datetime_start": "2026-02-03T03:08:59.286213",
+      "datetime_complete": "2026-02-03T03:28:52.187151",
+      "duration_sec": 1192.900938,
+      "user_attrs": {
+        "time": 1192.8968677520752
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 11,
+      "state": "COMPLETE",
+      "value": 892.700574885022,
+      "params": {
+        "lambda": 9.328687137452278
+      },
+      "datetime_start": "2026-02-03T03:28:52.190087",
+      "datetime_complete": "2026-02-03T03:48:23.515473",
+      "duration_sec": 1171.325386,
+      "user_attrs": {
+        "time": 1171.3221917152405
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 12,
+      "state": "COMPLETE",
+      "value": 892.6917961552939,
+      "params": {
+        "lambda": 9.695401570767874
+      },
+      "datetime_start": "2026-02-03T03:48:23.518651",
+      "datetime_complete": "2026-02-03T04:08:58.801828",
+      "duration_sec": 1235.283177,
+      "user_attrs": {
+        "time": 1235.2804851531982
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 13,
+      "state": "COMPLETE",
+      "value": 893.1742876303774,
+      "params": {
+        "lambda": 8.044861319438262
+      },
+      "datetime_start": "2026-02-03T04:08:58.805181",
+      "datetime_complete": "2026-02-03T04:28:57.073871",
+      "duration_sec": 1198.26869,
+      "user_attrs": {
+        "time": 1198.2646133899689
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 14,
+      "state": "COMPLETE",
+      "value": 892.5223520079547,
+      "params": {
+        "lambda": 9.909733546017952
+      },
+      "datetime_start": "2026-02-03T04:28:57.076730",
+      "datetime_complete": "2026-02-03T04:48:50.449273",
+      "duration_sec": 1193.372543,
+      "user_attrs": {
+        "time": 1193.369545698166
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 15,
+      "state": "COMPLETE",
+      "value": 894.4002099610592,
+      "params": {
+        "lambda": 3.439331573586035
+      },
+      "datetime_start": "2026-02-03T04:48:50.452403",
+      "datetime_complete": "2026-02-03T05:08:31.172337",
+      "duration_sec": 1180.719934,
+      "user_attrs": {
+        "time": 1180.7174324989319
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 16,
+      "state": "COMPLETE",
+      "value": 893.1654892510775,
+      "params": {
+        "lambda": 8.154313670084674
+      },
+      "datetime_start": "2026-02-03T05:08:31.174928",
+      "datetime_complete": "2026-02-03T05:28:20.528315",
+      "duration_sec": 1189.353387,
+      "user_attrs": {
+        "time": 1189.3507120609283
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 17,
+      "state": "COMPLETE",
+      "value": 893.7037030414839,
+      "params": {
+        "lambda": 5.403316011787047
+      },
+      "datetime_start": "2026-02-03T05:28:20.531454",
+      "datetime_complete": "2026-02-03T05:48:37.308943",
+      "duration_sec": 1216.777489,
+      "user_attrs": {
+        "time": 1216.7742331027985
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 18,
+      "state": "COMPLETE",
+      "value": 893.3501946538457,
+      "params": {
+        "lambda": 7.328052999232778
+      },
+      "datetime_start": "2026-02-03T05:48:37.311283",
+      "datetime_complete": "2026-02-03T06:09:05.778952",
+      "duration_sec": 1228.467669,
+      "user_attrs": {
+        "time": 1228.4653384685516
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 19,
+      "state": "COMPLETE",
+      "value": 892.6274602401737,
+      "params": {
+        "lambda": 9.977314241654543
+      },
+      "datetime_start": "2026-02-03T06:09:05.781668",
+      "datetime_complete": "2026-02-03T06:28:48.054838",
+      "duration_sec": 1182.27317,
+      "user_attrs": {
+        "time": 1182.2702717781067
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 20,
+      "state": "COMPLETE",
+      "value": 894.0758525234297,
+      "params": {
+        "lambda": 4.435327652432442
+      },
+      "datetime_start": "2026-02-03T06:28:48.057999",
+      "datetime_complete": "2026-02-03T06:48:55.187092",
+      "duration_sec": 1207.129093,
+      "user_attrs": {
+        "time": 1207.1258537769318
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 21,
+      "state": "COMPLETE",
+      "value": 892.6546663277298,
+      "params": {
+        "lambda": 9.757167131940099
+      },
+      "datetime_start": "2026-02-03T06:48:55.190312",
+      "datetime_complete": "2026-02-03T07:09:00.102754",
+      "duration_sec": 1204.912442,
+      "user_attrs": {
+        "time": 1204.9087390899658
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 22,
+      "state": "COMPLETE",
+      "value": 892.8475856016205,
+      "params": {
+        "lambda": 8.653455348977456
+      },
+      "datetime_start": "2026-02-03T07:09:00.105494",
+      "datetime_complete": "2026-02-03T07:29:27.163716",
+      "duration_sec": 1227.058222,
+      "user_attrs": {
+        "time": 1227.0554163455963
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 23,
+      "state": "COMPLETE",
+      "value": 892.5232150609345,
+      "params": {
+        "lambda": 9.91948638150065
+      },
+      "datetime_start": "2026-02-03T07:29:27.167025",
+      "datetime_complete": "2026-02-03T07:49:41.623718",
+      "duration_sec": 1214.456693,
+      "user_attrs": {
+        "time": 1214.4523315429688
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 24,
+      "state": "COMPLETE",
+      "value": 892.8422778159503,
+      "params": {
+        "lambda": 8.870516677118399
+      },
+      "datetime_start": "2026-02-03T07:49:41.626698",
+      "datetime_complete": "2026-02-03T08:10:42.289495",
+      "duration_sec": 1260.662797,
+      "user_attrs": {
+        "time": 1260.6582052707672
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 25,
+      "state": "COMPLETE",
+      "value": 893.0714341638145,
+      "params": {
+        "lambda": 7.860961633858396
+      },
+      "datetime_start": "2026-02-03T08:10:42.292162",
+      "datetime_complete": "2026-02-03T08:30:50.217462",
+      "duration_sec": 1207.9253,
+      "user_attrs": {
+        "time": 1207.9210784435272
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 26,
+      "state": "COMPLETE",
+      "value": 893.3970764840655,
+      "params": {
+        "lambda": 6.453135361835262
+      },
+      "datetime_start": "2026-02-03T08:30:50.220801",
+      "datetime_complete": "2026-02-03T08:51:22.621742",
+      "duration_sec": 1232.400941,
+      "user_attrs": {
+        "time": 1232.3967580795288
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 27,
+      "state": "COMPLETE",
+      "value": 892.6226499735096,
+      "params": {
+        "lambda": 9.992094439132808
+      },
+      "datetime_start": "2026-02-03T08:51:22.624414",
+      "datetime_complete": "2026-02-03T09:11:52.408273",
+      "duration_sec": 1229.783859,
+      "user_attrs": {
+        "time": 1229.7803275585175
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 28,
+      "state": "COMPLETE",
+      "value": 892.7988107116034,
+      "params": {
+        "lambda": 8.920776030295242
+      },
+      "datetime_start": "2026-02-03T09:11:52.411628",
+      "datetime_complete": "2026-02-03T09:32:41.907276",
+      "duration_sec": 1249.495648,
+      "user_attrs": {
+        "time": 1249.4915611743927
+      },
+      "system_attrs": {}
+    },
+    {
+      "number": 29,
+      "state": "COMPLETE",
+      "value": 894.2272386739081,
+      "params": {
+        "lambda": 3.6880401612730402
+      },
+      "datetime_start": "2026-02-03T09:32:41.910757",
+      "datetime_complete": "2026-02-03T09:52:45.898832",
+      "duration_sec": 1203.988075,
+      "user_attrs": {
+        "time": 1203.9837481975555
+      },
+      "system_attrs": {}
+    }
+  ]
+}

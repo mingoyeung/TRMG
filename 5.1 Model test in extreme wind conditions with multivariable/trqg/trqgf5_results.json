@@ -1,0 +1,42 @@
+{
+    "best_hyperparameters": {
+        "n_hidden": 9,
+        "n_hidden2": 5,
+        "penalty": 0.000123027014315509
+    },
+    "best_validation_loss": 0.06588353478131825,
+    "timing": {
+        "train_duration_seconds": 18.799745798110962,
+        "test_duration_seconds": 0.05298185348510742,
+        "train_duration_formatted": "18.800 seconds",
+        "test_duration_formatted": "0.0530 seconds"
+    },
+    "test_metrics": {
+        "total_loss": 0.03084152856228524,
+        "quantile_losses": {
+            "quantile_0.05": 0.022624141315987053,
+            "quantile_0.10": 0.023075912931943367,
+            "quantile_0.15": 0.03251461366734229,
+            "quantile_0.20": 0.03425728716009536,
+            "quantile_0.25": 0.035175926916516956,
+            "quantile_0.30": 0.036216880657682526,
+            "quantile_0.35": 0.03783753908534127,
+            "quantile_0.40": 0.039039488263003644,
+            "quantile_0.45": 0.0395376440574975,
+            "quantile_0.50": 0.03938637551488936,
+            "quantile_0.55": 0.03880110661215236,
+            "quantile_0.60": 0.037399122837166184,
+            "quantile_0.65": 0.03207734223772224,
+            "quantile_0.70": 0.030441266585140493,
+            "quantile_0.75": 0.030010592293183244,
+            "quantile_0.80": 0.026849862005188168,
+            "quantile_0.85": 0.02289743713018905,
+            "quantile_0.90": 0.015578533007493104,
+            "quantile_0.95": 0.012267970404885408
+        }
+    },
+    "optimization_info": {
+        "n_trials": 100,
+        "study_name": "qrnn_hyperparam_opt"
+    }
+}

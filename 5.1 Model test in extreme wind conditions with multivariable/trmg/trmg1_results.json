@@ -1,0 +1,44 @@
+{
+    "timestamp": "2026-02-07 01:39:15",
+    "best_hyperparameters": {
+        "n_hidden": 7,
+        "n_hidden2": 4,
+        "penalty": 0.061324236527001315
+    },
+    "best_validation_loss_denormalized": 0.019129106774926186,
+    "timing": {
+        "optuna_duration_seconds": 2476.790917158127,
+        "final_train_duration_seconds": 24.54358959197998,
+        "optuna_duration_formatted": "41.28 minutes",
+        "test_duration_seconds": 0.013411998748779297,
+        "test_duration_formatted": "0.0134 seconds"
+    },
+    "test_metrics": {
+        "total_loss_denormalized": 0.021096516400575638,
+        "quantile_losses_denormalized": {
+            "tau=0.05": 0.01600731909275055,
+            "tau=0.10": 0.006543786730617285,
+            "tau=0.15": 0.005146126728504896,
+            "tau=0.20": 0.00901032704859972,
+            "tau=0.25": 0.0678848847746849,
+            "tau=0.30": 0.11916117370128632,
+            "tau=0.35": 0.05875688046216965,
+            "tau=0.40": 0.014117571525275707,
+            "tau=0.45": 0.03264356777071953,
+            "tau=0.50": 0.008029528893530369,
+            "tau=0.55": 0.005145048722624779,
+            "tau=0.60": 0.00495473388582468,
+            "tau=0.65": 0.004670899361371994,
+            "tau=0.70": 0.00497291749343276,
+            "tau=0.75": 0.005654866341501474,
+            "tau=0.80": 0.005454982630908489,
+            "tau=0.85": 0.008770289830863476,
+            "tau=0.90": 0.015598810277879238,
+            "tau=0.95": 0.008310070261359215
+        }
+    },
+    "optimization_info": {
+        "n_trials": 100,
+        "study_name": "mcqrnn_hyperparameter_optimization"
+    }
+}
