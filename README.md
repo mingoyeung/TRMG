@@ -142,7 +142,7 @@ Key dependencies:
 
 ---
 
-### Section 4.2 — Decomposition and Reconstruction
+### Section 4.2 — Decomposition and Reconstruction (only CPU)
 
 > ⭐ Updated packages may lead to differences in R2CMSE calculation. We present the Python calculation results in “5.1 R2CMSE results”, and have also uploaded the MATLAB implementation of R2CMSE. Reproduction can be achieved by running **r2cmse\_replication\_matlab/r2cmse_main.m**;
 > Precomputed reconstruction CSV files have been saved in the subfolders of each model for direct use.`

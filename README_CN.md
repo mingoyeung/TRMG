@@ -145,7 +145,7 @@ pip install -r requirements.txt
 
 ---
 
-### 第4.2节 — 分解与重构
+### 第4.2节 — 分解与重构 (CPU即可完成)
 
 > ⚠️ python依赖包的更新，导致R2CMSE的重构结果可能存在细微差异。我们在5.1 R2CMSE results部分列出了python计算结果，同时上传了R2CMSE的MATLAB版本，运行r2cmse_replication_matlab中的r2cmse_main.m可以复现。
 > 各模型子文件夹中已保存预计算的重构CSV文件供直接使用。
