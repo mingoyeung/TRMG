@@ -147,11 +147,11 @@ Key dependencies:
 > ⭐ Updated packages may lead to differences in R2CMSE calculation. We present the Python calculation results in “5.1 R2CMSE results”, and have also uploaded the MATLAB implementation of R2CMSE. Reproduction can be achieved by running **r2cmse\_replication\_matlab/r2cmse_main.m**;
 > Precomputed reconstruction CSV files have been saved in the subfolders of each model for direct use.`
 
-| Output | Script | Cell | Input | Output File |
-|--------|--------|------|-------|-------------|
-| Fig 3(a) TVFEMD | `4.1-4.3/preprocessing.ipynb` | *"4.1 TVFEMD decomposition"* | time_series_15min_singleindex_filtered.csv | `4.1-4.3/trmg/tvfemdresults_TenneT.csv` |
-| Fig 3(b)(c) R2CMSE | `4.1-4.3/preprocessing.ipynb` | *"5.1 R2CMSE results"* | tvfemdresults_TenneT.csv | `4.1-4.3/trmg/imfreconstruction_TenneT.csv`,also listed in "5.1 R2CMSE results" cells |
-
+| Output                        | Script | Cell                         | Input | Output File                                                                                                                                                                             |
+|-------------------------------|--------|------------------------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Fig 3(a) TVFEMD               | `4.1-4.3/preprocessing.ipynb` | *"4.1 TVFEMD decomposition"* | time_series_15min_singleindex_filtered.csv | `4.1-4.3/trmg/tvfemdresults_TenneT.csv`                                                                                                                                                 |
+| Fig 3(b)(c) R2CMSE            | `4.1-4.3/preprocessing.ipynb` | *"5.1 R2CMSE results"*       | tvfemdresults_TenneT.csv | `4.1-4.3/trmg/imfreconstruction_TenneT.csv`,also listed in "5.1 R2CMSE results" cells                                                                                                   |
+| Hybrid baselines (Appendix D) | `4.1-4.3/preprocessing.ipynb` | Cells 4.2-4.4, 5.1-5.2       | time_series_15min_singleindex_filtered.csv | ERMG: `4.1-4.3/trmg/imfreconstruction_TenneT.csv` TSMG:`4.1-4.3/tsmg/sereconstruction.csv` VRLG:`4.1-4.3/vrlg/vmd_reconstruction.csv` WRGG:`4.1-4.3/vrlg/wt_decomposition_results.csv`|
 ---
 
 ### Section 4.3 — Model Training (Table 4)
@@ -193,10 +193,11 @@ Key dependencies:
 
 ### Section 5.1 — Fujian Dataset
 
-| Output | Script | Input |
-|--------|--------|-------|
-| Appendix E (data detection) | `5.1 .../data detection/datadetection.ipynb` | `data_fujian.xlsx` |
-| Table F.1 (all metrics) | `5.1 .../evaluation_metrics_values.ipynb` | `5.1 .../*f.xlsx` files |
+| Output                  | Script                                             | Input                   |
+|-------------------------|----------------------------------------------------|-------------------------|
+| Appendix E Fig E.1      | `5.1 .../data detection/datadetection.ipynb`       | `data_fujian.xlsx`      |
+| Appendix E Table E.2    | describe() function for "pandas" package in python | same as above           |
+| Table F.1 (all metrics) | `5.1 .../evaluation_metrics_values.ipynb`          | `5.1 .../*f.xlsx` files |
 
 > Model training and test scripts for Fujian dataset follow the same structure
 > as Section 4.3. Input files use the Fujian-specific CSVs.
@@ -245,7 +246,7 @@ Key dependencies:
 ### Option A — Quick Verification (Recommended, CPU only, ~mins)
 
 No model training needed. Uses pre-computed `results/` files.
-
+```
 Step 1: Run results/4.1-4.3/preprocessing.ipynb
 → Reproduces Section 4.1-4.2
 Step 2: Run results/section 4.4/evaluation_metrics_values.ipynb
@@ -258,7 +259,7 @@ Step 5: Run results/section 4.4/interval prediction/plot_interval.ipynb
 → Reproduces Fig 5
 Step 6: Run results/section 4.4/probability density prediction/kdePLOT.ipynb
 → Reproduces Fig 6
-
+```
 ---
 
 ### 🔁 Option B — Retrain with Saved Hyperparameters (GPU required)

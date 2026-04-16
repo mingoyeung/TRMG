@@ -150,10 +150,11 @@ pip install -r requirements.txt
 > ⚠️ python依赖包的更新，导致R2CMSE的重构结果可能存在细微差异。我们在5.1 R2CMSE results部分列出了python计算结果，同时上传了R2CMSE的MATLAB版本，运行r2cmse_replication_matlab中的r2cmse_main.m可以复现。
 > 各模型子文件夹中已保存预计算的重构CSV文件供直接使用。
 
-| 论文输出 | 脚本 | Cell | 输入 | 输出文件 |
-|---------|------|------|------|---------|
-| 图3(a) TVFEMD结果 | `4.1-4.3/preprocessing.ipynb` | *"4.1 TVFEMD decomposition"* | `time_series_15min_singleindex_filtered.csv` | `4.1-4.3/trmg/tvfemdresults_TenneT.csv` |
-| 图3(b)(c) R2CMSE结果 | `4.1-4.3/preprocessing.ipynb` | *"5.1 R2CMSE results"* | `tvfemdresults_TenneT.csv` | `4.1-4.3/trmg/imfreconstruction_TenneT.csv`，计算结果也存在"5.1 R2CMSE results"的运行单元格 |
+| 论文输出                     | 脚本 | Cell                         | 输入 | 输出文件 |
+|--------------------------|------|------------------------------|------|---------|
+| 图3(a) TVFEMD结果           | `4.1-4.3/preprocessing.ipynb` | *"4.1 TVFEMD decomposition"* | `time_series_15min_singleindex_filtered.csv` | `4.1-4.3/trmg/tvfemdresults_TenneT.csv` |
+| 图3(b)(c) R2CMSE结果        | `4.1-4.3/preprocessing.ipynb` | *"5.1 R2CMSE results"*       | `tvfemdresults_TenneT.csv` | `4.1-4.3/trmg/imfreconstruction_TenneT.csv`，计算结果也存在"5.1 R2CMSE results"的运行单元格 |
+| 组合基准模型分解与重构 (Appendix D) | `4.1-4.3/preprocessing.ipynb` | 代码单元格对应 4.2-4.4, 5.1-5.2的部分  | time_series_15min_singleindex_filtered.csv | ERMG: `4.1-4.3/trmg/imfreconstruction_TenneT.csv` TSMG:`4.1-4.3/tsmg/sereconstruction.csv` VRLG:`4.1-4.3/vrlg/vmd_reconstruction.csv` WRGG:`4.1-4.3/vrlg/wt_decomposition_results.csv`|
 
 ---
 
@@ -197,10 +198,11 @@ pip install -r requirements.txt
 
 ### 第5.1节 — 福建数据集验证
 
-| 论文输出 | 脚本 | 输入 |
-|---------|------|------|
-| 附录E（数据检测） | `5.1 .../data detection/datadetection.ipynb` | `data_fujian.xlsx` |
-| 表F.1 | `5.1 .../evaluation_metrics_values.ipynb` | `5.1 .../*f.xlsx` 系列文件 |
+| 论文输出     | 脚本                                          | 输入                     |
+|----------|---------------------------------------------|------------------------|
+| 附录E 图E.1 | `5.1 .../data detection/datadetection.ipynb` | `data_fujian.xlsx`     |
+| 附录E 表E.2 | python代码包"pandas"运行describe()函数即可  | 同上                     |
+| 表F.1     | `5.1 .../evaluation_metrics_values.ipynb`   | `5.1 .../*f.xlsx` 系列文件 |
 
 > 福建数据集的模型训练结构与第4.3节相同，使用福建专用输入文件。
 
