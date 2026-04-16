@@ -323,6 +323,8 @@ not specific to this study. See:
 - [PyTorch reproducibility docs](https://pytorch.org/docs/stable/notes/randomness.html)
 - [TensorFlow determinism docs](https://github.com/mm3509/reproducibility/blob/master/tensorflow-reproducibility.md)
 
+**This change in configuration did not significantly alter the conclusions in the main text.**
+
 **The pre-computed prediction files in `results/` represent the exact
 outputs used in the paper.** All tables and figures reported in the
 manuscript are fully and deterministically reproducible from these
