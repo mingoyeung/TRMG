@@ -1,6 +1,7 @@
 # Replication Package
 
 # Offshore Wind Power Probabilistic Forecasting Using TRMG
+[Chinese version](README_CN.md)
 
 ---
 
