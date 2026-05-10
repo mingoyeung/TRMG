@@ -1,0 +1,1012 @@
+{
+    "best_params": 278,
+    "best_loss": 2336920.8418487315,
+    "best_trial_number": 69,
+    "total_time": 30205.507691144943,
+    "study": {
+        "study_name": "no-name-a16fb52f-e02c-4ed0-8c5f-a0e78a091c0d",
+        "direction": "1",
+        "trials": [
+            {
+                "number": 0,
+                "params": {
+                    "n_estimators": 118
+                },
+                "value": 2337774.446902934,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:17:10.276508",
+                "datetime_complete": "2026-02-02 11:19:37.111996"
+            },
+            {
+                "number": 1,
+                "params": {
+                    "n_estimators": 286
+                },
+                "value": 2336941.9643743746,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:19:37.115024",
+                "datetime_complete": "2026-02-02 11:25:46.340888"
+            },
+            {
+                "number": 2,
+                "params": {
+                    "n_estimators": 223
+                },
+                "value": 2337083.365018159,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:25:46.343591",
+                "datetime_complete": "2026-02-02 11:30:20.097258"
+            },
+            {
+                "number": 3,
+                "params": {
+                    "n_estimators": 184
+                },
+                "value": 2337306.0395629485,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:30:20.099788",
+                "datetime_complete": "2026-02-02 11:34:06.296757"
+            },
+            {
+                "number": 4,
+                "params": {
+                    "n_estimators": 55
+                },
+                "value": 2338784.0142237856,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:34:06.299877",
+                "datetime_complete": "2026-02-02 11:35:16.918837"
+            },
+            {
+                "number": 5,
+                "params": {
+                    "n_estimators": 55
+                },
+                "value": 2338784.0142237856,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:35:16.921355",
+                "datetime_complete": "2026-02-02 11:36:26.755365"
+            },
+            {
+                "number": 6,
+                "params": {
+                    "n_estimators": 26
+                },
+                "value": 2340077.7557024034,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:36:26.757674",
+                "datetime_complete": "2026-02-02 11:37:01.181593"
+            },
+            {
+                "number": 7,
+                "params": {
+                    "n_estimators": 262
+                },
+                "value": 2336992.515130614,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:37:01.184551",
+                "datetime_complete": "2026-02-02 11:42:26.755246"
+            },
+            {
+                "number": 8,
+                "params": {
+                    "n_estimators": 184
+                },
+                "value": 2337306.0395629485,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:42:26.757835",
+                "datetime_complete": "2026-02-02 11:46:14.080061"
+            },
+            {
+                "number": 9,
+                "params": {
+                    "n_estimators": 216
+                },
+                "value": 2337070.98445304,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:46:14.083181",
+                "datetime_complete": "2026-02-02 11:50:40.975844"
+            },
+            {
+                "number": 10,
+                "params": {
+                    "n_estimators": 295
+                },
+                "value": 2337014.7685942496,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:50:40.978916",
+                "datetime_complete": "2026-02-02 11:56:43.267279"
+            },
+            {
+                "number": 11,
+                "params": {
+                    "n_estimators": 288
+                },
+                "value": 2336966.7240819302,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 11:56:43.269605",
+                "datetime_complete": "2026-02-02 12:02:43.003623"
+            },
+            {
+                "number": 12,
+                "params": {
+                    "n_estimators": 292
+                },
+                "value": 2336977.830070772,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:02:43.006705",
+                "datetime_complete": "2026-02-02 12:08:42.536992"
+            },
+            {
+                "number": 13,
+                "params": {
+                    "n_estimators": 246
+                },
+                "value": 2337093.6610858627,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:08:42.539458",
+                "datetime_complete": "2026-02-02 12:13:47.031630"
+            },
+            {
+                "number": 14,
+                "params": {
+                    "n_estimators": 126
+                },
+                "value": 2337763.5135118617,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:13:47.034574",
+                "datetime_complete": "2026-02-02 12:16:28.020909"
+            },
+            {
+                "number": 15,
+                "params": {
+                    "n_estimators": 263
+                },
+                "value": 2336986.3344682553,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:16:28.023470",
+                "datetime_complete": "2026-02-02 12:21:53.173148"
+            },
+            {
+                "number": 16,
+                "params": {
+                    "n_estimators": 297
+                },
+                "value": 2337029.432998872,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:21:53.175937",
+                "datetime_complete": "2026-02-02 12:27:58.494480"
+            },
+            {
+                "number": 17,
+                "params": {
+                    "n_estimators": 171
+                },
+                "value": 2337323.1502037477,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:27:58.496881",
+                "datetime_complete": "2026-02-02 12:31:29.014558"
+            },
+            {
+                "number": 18,
+                "params": {
+                    "n_estimators": 218
+                },
+                "value": 2337090.788647847,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:31:29.017341",
+                "datetime_complete": "2026-02-02 12:35:57.088525"
+            },
+            {
+                "number": 19,
+                "params": {
+                    "n_estimators": 120
+                },
+                "value": 2337795.256777013,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:35:57.091117",
+                "datetime_complete": "2026-02-02 12:38:24.805385"
+            },
+            {
+                "number": 20,
+                "params": {
+                    "n_estimators": 251
+                },
+                "value": 2337045.5472380873,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:38:24.808160",
+                "datetime_complete": "2026-02-02 12:43:34.626466"
+            },
+            {
+                "number": 21,
+                "params": {
+                    "n_estimators": 283
+                },
+                "value": 2336949.1388040488,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:43:34.628637",
+                "datetime_complete": "2026-02-02 12:49:21.572703"
+            },
+            {
+                "number": 22,
+                "params": {
+                    "n_estimators": 273
+                },
+                "value": 2336955.301393232,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:49:21.575060",
+                "datetime_complete": "2026-02-02 12:54:56.987038"
+            },
+            {
+                "number": 23,
+                "params": {
+                    "n_estimators": 269
+                },
+                "value": 2336940.511468378,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 12:54:56.989971",
+                "datetime_complete": "2026-02-02 13:00:48.825102"
+            },
+            {
+                "number": 24,
+                "params": {
+                    "n_estimators": 236
+                },
+                "value": 2337122.0921625993,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:00:48.827788",
+                "datetime_complete": "2026-02-02 13:05:53.379961"
+            },
+            {
+                "number": 25,
+                "params": {
+                    "n_estimators": 200
+                },
+                "value": 2337184.622570445,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:05:53.383008",
+                "datetime_complete": "2026-02-02 13:10:12.215542"
+            },
+            {
+                "number": 26,
+                "params": {
+                    "n_estimators": 275
+                },
+                "value": 2336945.9507840835,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:10:12.218080",
+                "datetime_complete": "2026-02-02 13:16:03.843553"
+            },
+            {
+                "number": 27,
+                "params": {
+                    "n_estimators": 242
+                },
+                "value": 2337089.701380817,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:16:03.846530",
+                "datetime_complete": "2026-02-02 13:21:14.585849"
+            },
+            {
+                "number": 28,
+                "params": {
+                    "n_estimators": 145
+                },
+                "value": 2337449.199235765,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:21:14.588465",
+                "datetime_complete": "2026-02-02 13:24:20.881820"
+            },
+            {
+                "number": 29,
+                "params": {
+                    "n_estimators": 270
+                },
+                "value": 2336951.2199222525,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:24:20.884341",
+                "datetime_complete": "2026-02-02 13:30:07.712927"
+            },
+            {
+                "number": 30,
+                "params": {
+                    "n_estimators": 202
+                },
+                "value": 2337219.870388809,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:30:07.716465",
+                "datetime_complete": "2026-02-02 13:34:21.412815"
+            },
+            {
+                "number": 31,
+                "params": {
+                    "n_estimators": 280
+                },
+                "value": 2336945.575470737,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:34:21.415011",
+                "datetime_complete": "2026-02-02 13:40:13.838386"
+            },
+            {
+                "number": 32,
+                "params": {
+                    "n_estimators": 231
+                },
+                "value": 2337114.391936192,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:40:13.841700",
+                "datetime_complete": "2026-02-02 13:45:06.215333"
+            },
+            {
+                "number": 33,
+                "params": {
+                    "n_estimators": 259
+                },
+                "value": 2336983.5964175533,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:45:06.218598",
+                "datetime_complete": "2026-02-02 13:50:29.580428"
+            },
+            {
+                "number": 34,
+                "params": {
+                    "n_estimators": 280
+                },
+                "value": 2336945.575470737,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:50:29.583009",
+                "datetime_complete": "2026-02-02 13:56:13.864280"
+            },
+            {
+                "number": 35,
+                "params": {
+                    "n_estimators": 299
+                },
+                "value": 2337066.527703123,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 13:56:13.867199",
+                "datetime_complete": "2026-02-02 14:02:21.592968"
+            },
+            {
+                "number": 36,
+                "params": {
+                    "n_estimators": 95
+                },
+                "value": 2337998.5212288103,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:02:21.595555",
+                "datetime_complete": "2026-02-02 14:04:20.865381"
+            },
+            {
+                "number": 37,
+                "params": {
+                    "n_estimators": 280
+                },
+                "value": 2336945.575470737,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:04:20.867979",
+                "datetime_complete": "2026-02-02 14:10:05.442166"
+            },
+            {
+                "number": 38,
+                "params": {
+                    "n_estimators": 254
+                },
+                "value": 2337032.4862841405,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:10:05.444493",
+                "datetime_complete": "2026-02-02 14:15:28.197487"
+            },
+            {
+                "number": 39,
+                "params": {
+                    "n_estimators": 226
+                },
+                "value": 2337091.593272284,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:15:28.200011",
+                "datetime_complete": "2026-02-02 14:20:05.437469"
+            },
+            {
+                "number": 40,
+                "params": {
+                    "n_estimators": 195
+                },
+                "value": 2337240.2330919956,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:20:05.440105",
+                "datetime_complete": "2026-02-02 14:24:05.556154"
+            },
+            {
+                "number": 41,
+                "params": {
+                    "n_estimators": 279
+                },
+                "value": 2336927.998290427,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:24:05.558660",
+                "datetime_complete": "2026-02-02 14:29:47.510774"
+            },
+            {
+                "number": 42,
+                "params": {
+                    "n_estimators": 269
+                },
+                "value": 2336940.511468378,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:29:47.513775",
+                "datetime_complete": "2026-02-02 14:35:17.985821"
+            },
+            {
+                "number": 43,
+                "params": {
+                    "n_estimators": 262
+                },
+                "value": 2336992.515130614,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:35:17.988138",
+                "datetime_complete": "2026-02-02 14:40:40.074146"
+            },
+            {
+                "number": 44,
+                "params": {
+                    "n_estimators": 92
+                },
+                "value": 2337992.3690884286,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:40:40.077045",
+                "datetime_complete": "2026-02-02 14:42:35.106000"
+            },
+            {
+                "number": 45,
+                "params": {
+                    "n_estimators": 300
+                },
+                "value": 2337070.2684263326,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:42:35.108769",
+                "datetime_complete": "2026-02-02 14:48:44.903273"
+            },
+            {
+                "number": 46,
+                "params": {
+                    "n_estimators": 241
+                },
+                "value": 2337115.345120955,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:48:44.905745",
+                "datetime_complete": "2026-02-02 14:53:43.085066"
+            },
+            {
+                "number": 47,
+                "params": {
+                    "n_estimators": 285
+                },
+                "value": 2336940.5352660907,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:53:43.087990",
+                "datetime_complete": "2026-02-02 14:59:34.590258"
+            },
+            {
+                "number": 48,
+                "params": {
+                    "n_estimators": 263
+                },
+                "value": 2336986.3344682553,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 14:59:34.593137",
+                "datetime_complete": "2026-02-02 15:04:59.460952"
+            },
+            {
+                "number": 49,
+                "params": {
+                    "n_estimators": 250
+                },
+                "value": 2337037.3151747687,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:04:59.463584",
+                "datetime_complete": "2026-02-02 15:10:08.849659"
+            },
+            {
+                "number": 50,
+                "params": {
+                    "n_estimators": 288
+                },
+                "value": 2336966.7240819302,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:10:08.852962",
+                "datetime_complete": "2026-02-02 15:16:12.760942"
+            },
+            {
+                "number": 51,
+                "params": {
+                    "n_estimators": 271
+                },
+                "value": 2336950.1159135555,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:16:12.763361",
+                "datetime_complete": "2026-02-02 15:21:59.690909"
+            },
+            {
+                "number": 52,
+                "params": {
+                    "n_estimators": 31
+                },
+                "value": 2339562.4037857126,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:21:59.693742",
+                "datetime_complete": "2026-02-02 15:22:39.895062"
+            },
+            {
+                "number": 53,
+                "params": {
+                    "n_estimators": 288
+                },
+                "value": 2336966.7240819302,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:22:39.897330",
+                "datetime_complete": "2026-02-02 15:28:33.231254"
+            },
+            {
+                "number": 54,
+                "params": {
+                    "n_estimators": 215
+                },
+                "value": 2337075.0422234666,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:28:33.233635",
+                "datetime_complete": "2026-02-02 15:32:59.108768"
+            },
+            {
+                "number": 55,
+                "params": {
+                    "n_estimators": 286
+                },
+                "value": 2336941.9643743746,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:32:59.111193",
+                "datetime_complete": "2026-02-02 15:39:05.537173"
+            },
+            {
+                "number": 56,
+                "params": {
+                    "n_estimators": 291
+                },
+                "value": 2336971.6236182763,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:39:05.540234",
+                "datetime_complete": "2026-02-02 15:45:06.531955"
+            },
+            {
+                "number": 57,
+                "params": {
+                    "n_estimators": 268
+                },
+                "value": 2336934.6786280666,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:45:06.534648",
+                "datetime_complete": "2026-02-02 15:50:40.858612"
+            },
+            {
+                "number": 58,
+                "params": {
+                    "n_estimators": 264
+                },
+                "value": 2336980.209073597,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:50:40.863893",
+                "datetime_complete": "2026-02-02 15:56:11.355234"
+            },
+            {
+                "number": 59,
+                "params": {
+                    "n_estimators": 247
+                },
+                "value": 2337047.7124894722,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 15:56:11.357587",
+                "datetime_complete": "2026-02-02 16:01:16.828179"
+            },
+            {
+                "number": 60,
+                "params": {
+                    "n_estimators": 159
+                },
+                "value": 2337371.9277986656,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:01:16.830602",
+                "datetime_complete": "2026-02-02 16:04:36.197053"
+            },
+            {
+                "number": 61,
+                "params": {
+                    "n_estimators": 271
+                },
+                "value": 2336950.1159135555,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:04:36.199988",
+                "datetime_complete": "2026-02-02 16:10:18.212482"
+            },
+            {
+                "number": 62,
+                "params": {
+                    "n_estimators": 287
+                },
+                "value": 2336961.6613487327,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:10:18.215574",
+                "datetime_complete": "2026-02-02 16:16:14.775427"
+            },
+            {
+                "number": 63,
+                "params": {
+                    "n_estimators": 273
+                },
+                "value": 2336955.301393232,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:16:14.778347",
+                "datetime_complete": "2026-02-02 16:21:58.115491"
+            },
+            {
+                "number": 64,
+                "params": {
+                    "n_estimators": 256
+                },
+                "value": 2337003.105655261,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:21:58.117774",
+                "datetime_complete": "2026-02-02 16:27:13.146971"
+            },
+            {
+                "number": 65,
+                "params": {
+                    "n_estimators": 238
+                },
+                "value": 2337142.5438362965,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:27:13.149565",
+                "datetime_complete": "2026-02-02 16:32:22.636362"
+            },
+            {
+                "number": 66,
+                "params": {
+                    "n_estimators": 298
+                },
+                "value": 2337046.864407258,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:32:22.638911",
+                "datetime_complete": "2026-02-02 16:38:29.672042"
+            },
+            {
+                "number": 67,
+                "params": {
+                    "n_estimators": 267
+                },
+                "value": 2336946.756287618,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:38:29.674579",
+                "datetime_complete": "2026-02-02 16:44:00.851676"
+            },
+            {
+                "number": 68,
+                "params": {
+                    "n_estimators": 277
+                },
+                "value": 2336934.381020651,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:44:00.854179",
+                "datetime_complete": "2026-02-02 16:49:43.377697"
+            },
+            {
+                "number": 69,
+                "params": {
+                    "n_estimators": 278
+                },
+                "value": 2336920.8418487315,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:49:43.380633",
+                "datetime_complete": "2026-02-02 16:55:28.049795"
+            },
+            {
+                "number": 70,
+                "params": {
+                    "n_estimators": 278
+                },
+                "value": 2336920.8418487315,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 16:55:28.052813",
+                "datetime_complete": "2026-02-02 17:01:18.302069"
+            },
+            {
+                "number": 71,
+                "params": {
+                    "n_estimators": 278
+                },
+                "value": 2336920.8418487315,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:01:18.304490",
+                "datetime_complete": "2026-02-02 17:07:01.064525"
+            },
+            {
+                "number": 72,
+                "params": {
+                    "n_estimators": 277
+                },
+                "value": 2336934.381020651,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:07:01.067006",
+                "datetime_complete": "2026-02-02 17:12:42.657377"
+            },
+            {
+                "number": 73,
+                "params": {
+                    "n_estimators": 277
+                },
+                "value": 2336934.381020651,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:12:42.660220",
+                "datetime_complete": "2026-02-02 17:18:24.523786"
+            },
+            {
+                "number": 74,
+                "params": {
+                    "n_estimators": 278
+                },
+                "value": 2336920.8418487315,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:18:24.526761",
+                "datetime_complete": "2026-02-02 17:24:12.967035"
+            },
+            {
+                "number": 75,
+                "params": {
+                    "n_estimators": 278
+                },
+                "value": 2336920.8418487315,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:24:12.969630",
+                "datetime_complete": "2026-02-02 17:29:53.922615"
+            },
+            {
+                "number": 76,
+                "params": {
+                    "n_estimators": 251
+                },
+                "value": 2337045.5472380873,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:29:53.925273",
+                "datetime_complete": "2026-02-02 17:35:01.849661"
+            },
+            {
+                "number": 77,
+                "params": {
+                    "n_estimators": 293
+                },
+                "value": 2337006.5638666493,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:35:01.852466",
+                "datetime_complete": "2026-02-02 17:41:02.656676"
+            },
+            {
+                "number": 78,
+                "params": {
+                    "n_estimators": 258
+                },
+                "value": 2336993.74868161,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:41:02.659470",
+                "datetime_complete": "2026-02-02 17:46:22.380583"
+            },
+            {
+                "number": 79,
+                "params": {
+                    "n_estimators": 230
+                },
+                "value": 2337086.1207373766,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:46:22.383300",
+                "datetime_complete": "2026-02-02 17:51:09.194987"
+            },
+            {
+                "number": 80,
+                "params": {
+                    "n_estimators": 279
+                },
+                "value": 2336927.998290427,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:51:09.198488",
+                "datetime_complete": "2026-02-02 17:56:51.568596"
+            },
+            {
+                "number": 81,
+                "params": {
+                    "n_estimators": 279
+                },
+                "value": 2336927.998290427,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 17:56:51.570865",
+                "datetime_complete": "2026-02-02 18:02:36.251540"
+            },
+            {
+                "number": 82,
+                "params": {
+                    "n_estimators": 280
+                },
+                "value": 2336945.575470737,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:02:36.254628",
+                "datetime_complete": "2026-02-02 18:08:18.372089"
+            },
+            {
+                "number": 83,
+                "params": {
+                    "n_estimators": 291
+                },
+                "value": 2336971.6236182763,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:08:18.374595",
+                "datetime_complete": "2026-02-02 18:14:15.786672"
+            },
+            {
+                "number": 84,
+                "params": {
+                    "n_estimators": 256
+                },
+                "value": 2337003.105655261,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:14:15.789139",
+                "datetime_complete": "2026-02-02 18:19:27.938258"
+            },
+            {
+                "number": 85,
+                "params": {
+                    "n_estimators": 295
+                },
+                "value": 2337014.7685942496,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:19:27.941237",
+                "datetime_complete": "2026-02-02 18:25:28.716526"
+            },
+            {
+                "number": 86,
+                "params": {
+                    "n_estimators": 281
+                },
+                "value": 2336951.3726247894,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:25:28.718540",
+                "datetime_complete": "2026-02-02 18:31:13.043516"
+            },
+            {
+                "number": 87,
+                "params": {
+                    "n_estimators": 248
+                },
+                "value": 2337032.19238613,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:31:13.046020",
+                "datetime_complete": "2026-02-02 18:36:14.375704"
+            },
+            {
+                "number": 88,
+                "params": {
+                    "n_estimators": 262
+                },
+                "value": 2336992.515130614,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:36:14.378112",
+                "datetime_complete": "2026-02-02 18:41:46.488437"
+            },
+            {
+                "number": 89,
+                "params": {
+                    "n_estimators": 243
+                },
+                "value": 2337087.602839233,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:41:46.490854",
+                "datetime_complete": "2026-02-02 18:46:43.176170"
+            },
+            {
+                "number": 90,
+                "params": {
+                    "n_estimators": 274
+                },
+                "value": 2336944.6856162716,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:46:43.178977",
+                "datetime_complete": "2026-02-02 18:52:35.377087"
+            },
+            {
+                "number": 91,
+                "params": {
+                    "n_estimators": 279
+                },
+                "value": 2336927.998290427,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:52:35.379209",
+                "datetime_complete": "2026-02-02 18:58:16.834653"
+            },
+            {
+                "number": 92,
+                "params": {
+                    "n_estimators": 283
+                },
+                "value": 2336949.1388040488,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 18:58:16.837210",
+                "datetime_complete": "2026-02-02 19:04:06.235698"
+            },
+            {
+                "number": 93,
+                "params": {
+                    "n_estimators": 294
+                },
+                "value": 2337012.003923934,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:04:06.238185",
+                "datetime_complete": "2026-02-02 19:10:11.503268"
+            },
+            {
+                "number": 94,
+                "params": {
+                    "n_estimators": 277
+                },
+                "value": 2336934.381020651,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:10:11.506530",
+                "datetime_complete": "2026-02-02 19:15:53.005412"
+            },
+            {
+                "number": 95,
+                "params": {
+                    "n_estimators": 264
+                },
+                "value": 2336980.209073597,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:15:53.007910",
+                "datetime_complete": "2026-02-02 19:21:16.450605"
+            },
+            {
+                "number": 96,
+                "params": {
+                    "n_estimators": 300
+                },
+                "value": 2337070.2684263326,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:21:16.452779",
+                "datetime_complete": "2026-02-02 19:27:21.235342"
+            },
+            {
+                "number": 97,
+                "params": {
+                    "n_estimators": 100
+                },
+                "value": 2338006.0789520177,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:27:21.238187",
+                "datetime_complete": "2026-02-02 19:29:23.929598"
+            },
+            {
+                "number": 98,
+                "params": {
+                    "n_estimators": 282
+                },
+                "value": 2336950.8948985403,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:29:23.931966",
+                "datetime_complete": "2026-02-02 19:35:08.083870"
+            },
+            {
+                "number": 99,
+                "params": {
+                    "n_estimators": 268
+                },
+                "value": 2336934.6786280666,
+                "state": "TrialState.COMPLETE",
+                "datetime_start": "2026-02-02 19:35:08.086479",
+                "datetime_complete": "2026-02-02 19:40:35.769211"
+            }
+        ]
+    }
+}
