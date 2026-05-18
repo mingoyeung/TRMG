@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('imfreconstruction_TenneT.csv')
+    df = pd.read_excel('imfreconstruction_TenneT.xlsx')
     a = np.array(df.values[:, 0])#Choose:0-sub1; 1-sub2; 2-sub3; 3-sub4; 4-sub5
     a = np.expand_dims(a, axis=1)
 

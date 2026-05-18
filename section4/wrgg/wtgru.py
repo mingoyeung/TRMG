@@ -398,7 +398,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('wt_decomposition_results.csv')
+    df = pd.read_excel('wt_decomposition_results.xlsx')
     a = np.array(df.values[:, 4])#Choose: 0-wsub1; 1-wsub2;2-wsub3;3-wsub4;4-wsub5
     a = np.expand_dims(a, axis=1)
 

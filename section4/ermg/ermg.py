@@ -393,7 +393,7 @@ if __name__ == "__main__":
     set_random_seed(42)
 
     print("Loading data...")
-    df = pd.read_csv('emdreconstruction.csv')
+    df = pd.read_excel('emdreconstruction.xlsx')
     a = np.array(df.values[:, 0])#Choose 0-esub1; 1-esub2;2-esub3;3-esub4;4-esub5
     a = np.expand_dims(a, axis=1)
 

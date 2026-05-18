@@ -392,7 +392,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('sereconstruction.csv')
+    df = pd.read_excel('sereconstruction.xlsx')
     a = np.array(df.values[:, 0])#Choose: 0-sesub1; 1-sesub2;2-sesub3;3-sesub4
     a = np.expand_dims(a, axis=1)
 

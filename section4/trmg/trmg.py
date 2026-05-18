@@ -273,7 +273,7 @@ def objective(trial, x_train, y_train, x_val, y_val, taus, scaler,
               epochs=1000, learning_rate=0.01):
 
     n_hidden = trial.suggest_int('n_hidden', 1, 10)
-    n_hidden2 = trial.suggest_int('n_hidden2', 1, 10)#Reduce this layer in sensitivity analysis
+    n_hidden2 = trial.suggest_int('n_hidden2', 1, 10)
     penalty = trial.suggest_float('penalty', 1e-4, 1e-1)
 
     model, train_loss = train_model(
@@ -392,7 +392,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('imfreconstruction_TenneT.csv')
+    df = pd.read_excel('imfreconstruction_TenneT.xlsx')
     a = np.array(df.values[:, 0])#Choose: 0-sub1; 1-sub2;2-sub3;3-sub4;4-sub5
     a = np.expand_dims(a, axis=1)
 

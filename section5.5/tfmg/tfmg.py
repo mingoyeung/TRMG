@@ -393,7 +393,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('fuzzy.csv')
+    df = pd.read_excel('fuzzy.xlsx')
     a = np.array(df.values[:, 0])#Choose: 0-fesub1; 1-fesub2;2-fesub3;3-fesub4;4-fesub5
     a = np.expand_dims(a, axis=1)
 

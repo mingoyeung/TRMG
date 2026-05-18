@@ -409,7 +409,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('vmd_decomposition_fujian.csv')
+    df = pd.read_excel('vmd_decomposition_fujian.xlsx')
 
     a = np.array(df.values[:, :])
     # Build time-series dataset

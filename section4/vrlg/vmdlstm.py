@@ -411,7 +411,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('vmd_reconstruction.csv')
+    df = pd.read_excel('vmd_reconstruction.xlsx')
     a = np.array(df.values[:, 0])#Choose: 0-vsub1; 1-vsub2; 2-vsub3; 3-vsub4; 4-vsub5
     a = np.expand_dims(a, axis=1)
     # Create time series dataset

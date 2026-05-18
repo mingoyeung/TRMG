@@ -398,7 +398,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('wt_decomposition_fujian.csv')
+    df = pd.read_excel('wt_decomposition_fujian.xlsx')
 
     a = np.array(df.values[:, :])
     # Build time-series dataset

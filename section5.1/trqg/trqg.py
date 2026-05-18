@@ -324,7 +324,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    df = pd.read_csv('tvfemdresults_fujian.csv')
+    df = pd.read_excel('tvfemdresults_fujian.xlsx')
     a = np.array(df.values[:, :])
     # Build time-series dataset
     X, y, EX = split_data(a, horizon=1, window=96)

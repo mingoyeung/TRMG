@@ -392,7 +392,7 @@ if __name__ == "__main__":
     set_random_seed(42)
 
     print("Loading data...")
-    df = pd.read_csv('emdfujian.csv')
+    df = pd.read_excel('emdfujian.xlsx')
     a = np.array(df.values[:, :])
     # Build time-series dataset
     X, y, EX = split_data(a, horizon=1, window=96)

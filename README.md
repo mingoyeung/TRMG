@@ -18,7 +18,7 @@ trmg-replication/                         ← Project root (set as working direc
 │
 ├── data/                                ← ⭐ All raw and processed input data (centralized)
 │   ├── preprocessing.ipynb              ← Main preprocessing notebook (TVFEMD, R2CMSE, Figs 2–3, Table 3, Fig E.2)
-│   ├── cahrt.eddx                       ← Whole process of Figure 3 and E.2
+│   ├── chart.eddx                       ← Whole process of Figure 3 and E.2
 │   ├── tennet/
 │   │   ├── time_series_15min_singleindex_filtered.csv   ← TenneT raw data
 │   │   ├── time_series_15min_cleaned.csv                ← TenneT after preprocessing
@@ -67,32 +67,32 @@ trmg-replication/                         ← Project root (set as working direc
 ├── section4/                            ← Section 4: model training (TenneT)
 │   ├── trmg/
 │   │   ├── trmg.py
-│   │   ├── imfreconstruction_TenneT.csv
+│   │   ├── imfreconstruction_TenneT.xlsx
 │   │   ├── trmg1-5_results.json
 │   │   └── trmg1-5.xlsx
 │   ├── trqg/
 │   │   ├── trqg.py
-│   │   ├── imfreconstruction_TenneT.csv
+│   │   ├── imfreconstruction_TenneT.xlsx
 │   │   ├── trqg1-5_results.json
 │   │   └── trqg1-5.xlsx
 │   ├── wrgg/
 │   │   ├── wtgru.py
-│   │   ├── wt_decomposition_results.csv
+│   │   ├── wt_decomposition_results.xlsx
 │   │   ├── wtgru1-5_results.json
 │   │   └── wtgru1-5.xlsx
 │   ├── vrlg/
 │   │   ├── vmdlstm.py
-│   │   ├── vmd_reconstruction.csv
+│   │   ├── vmd_reconstruction.xlsx
 │   │   ├── qrlstm1-5_results.json
 │   │   └── vmdlstm1-5.xlsx
 │   ├── ermg/
 │   │   ├── ermg.py
-│   │   ├── emdreconstruction.csv
+│   │   ├── emdreconstruction.xlsx
 │   │   ├── ermg1-5_results.json
 │   │   └── ermg1-5.xlsx
 │   ├── tsmg/
 │   │   ├── tsmg.py
-│   │   ├── sereconstruction.csv
+│   │   ├── sereconstruction.xlsx
 │   │   ├── tsmg1-4_results.json
 │   │   └── tsmg1-4.xlsx
 │   ├── qrnn2/
@@ -126,12 +126,12 @@ trmg-replication/                         ← Project root (set as working direc
 └── section5.5/                         ← Ablation study (Table 11, Ablation column)
     ├── tfmg/
     │   ├── tfmg.py
-    │   ├── fuzzy.csv
+    │   ├── fuzzy.xlsx
     │   ├── tfmg1-5_results.json
     │   └── tfmg1-5.xlsx
     └── trq1g/
         ├── trq1g.py
-        ├── imfreconstruction_TenneT.csv
+        ├── imfreconstruction_TenneT.xlsx
         ├── trq1g1-5_results.json
         └── trq1g1-5.xlsx
 ```
@@ -236,8 +236,11 @@ This option reproduces **all main-text tables and figures** from pre-computed pr
 
 > **Note on QS (MW) score:** In this implementation, the Quantile Score (QS) is equivalent to pinball loss. The relevant cells in `results/evaluation_metrics_values.ipynb` are labelled *"Probability prediction: Pinball loss (QS in Table 5)"*.
 
-> **Note on CS score:** No code execution is needed. The Constraint Score formula is pre-computed directly in `constraint_score_calculation.xlsx`. Open the file, navigate to each model's sheet, and read the value in cell AN1 (highlighted in yellow).
-
+> **How to locate CS(MW) value:** Open `results/constraint_score_calculation.xlsx`. 
+> Each model has its own sheet (named after the model). Navigate to **cell AN1** 
+> (highlighted in yellow) — this is the final CS value reported in Table 5. 
+> Intermediate penalty terms are computed in columns T to AK (stored in cell AM1); 
+> cell AN1 contains the squared term and the final CS value.
 ---
 
 #### Step 3 — Reproduce Tables 6–7 and Table C.1 (Statistical Tests)
@@ -284,7 +287,13 @@ Run the notebook in two stages:
 
 **Table 11 — Sensitivity and Ablation Columns:**
 
-| Column | File to load | Action                                                                                             |
+> ⚠️ **Note on TRMG and MCQRNNG in Table 11:** These two models are not re-evaluated 
+> in the sensitivity/ablation section. Their Table 11 entries are **identical to Table 5** 
+> and are loaded from the same pre-computed files (`results/trmg.xlsx` and 
+> `results/mcqrnn2pred.xlsx`). No separate computation is required. Explicit comments 
+> have been added in `results/evaluation_metrics_values.ipynb` to confirm this.
+
+| Column | File to load | Action  |
 |--------|-------------|----------------------------------------------------------------------------------------------------|
 | Sensitivity (MCQRNN hidden layers) | `results/trmg1l.xlsx` | Uncomment the `trmg1l` loading line in `results/evaluation_metrics_values.ipynb` and run all cells. |
 | Ablation (no R2CMSE / 1-hidden QRNN) | `results/tfmg.xlsx` and `results/trq1g.xlsx` | Uncomment the `tfmg` loading lines in `results/evaluation_metrics_values.ipynb` and run all cells. |
@@ -293,16 +302,16 @@ Run the notebook in two stages:
 
 #### Step 5 — Reproduce Appendix E and Table F.1 (Fujian Dataset)
 
-| Notebook / File | Cell label | Input | Output |
-|----------------|-----------|-------|--------|
-| `data/fujian/detection.ipynb` | *"Missing value detection"* | `data/fujian/data_fujian.xlsx` | Table E.1 (missing values) |
-| `data/fujian/detection.ipynb` | *"Descriptive"* | `data/fujian/data_fujian.xlsx` | Table E.2 (descriptive statistics) |
-| `data/fujian/detection.ipynb` | *"Heatmap for Fig E.1(a) in Outlier detection"* | `data/fujian/data_fujian.xlsx` | Fig E.1(a) |
-| `data/fujian/detection.ipynb` | *"RANSAC fit in Fig E.1(b) in Outlier detection"* | `data/fujian/data_fujian.xlsx` | Fig E.1(b) + `data/fujian/res_new.csv` |
-| `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section) | `data/fujian/res_new.csv` | Fig E.2(a) |
-| `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section) | `section5.1/trmg/tvfemd_fujian.csv` | Fig E.2(b)(c) + `section5.1/trmg/tvfemdresults_fujian.csv` |
-| `section5.1/evaluation_metrics_values.ipynb` | Run all cells | `section5.1/*f.xlsx` + `section5.1/actualf.xlsx` | Table F.1 (all metrics except CS) |
-| `section5.1/constraint_score_fujian.xlsx` | Read **cell AN1** (highlighted in yellow) | Pre-computed | Table F.1 (CS score) |
+| Notebook / File | Cell label | Input | Output                                                      |
+|----------------|-----------|-------|-------------------------------------------------------------|
+| `data/fujian/detection.ipynb` | *"Missing value detection"* | `data/fujian/data_fujian.xlsx` | Table E.1 (missing values)                                  |
+| `data/fujian/detection.ipynb` | *"Descriptive"* | `data/fujian/data_fujian.xlsx` | Table E.2 (descriptive statistics)                          |
+| `data/fujian/detection.ipynb` | *"Heatmap for Fig E.1(a) in Outlier detection"* | `data/fujian/data_fujian.xlsx` | Fig E.1(a)                                                  |
+| `data/fujian/detection.ipynb` | *"RANSAC fit in Fig E.1(b) in Outlier detection"* | `data/fujian/data_fujian.xlsx` | Fig E.1(b) + `data/fujian/res_new.csv`                      |
+| `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section) | `data/fujian/res_new.csv` | Fig E.2(a)                                                  |
+| `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section) | `section5.1/trmg/tvfemd_fujian.csv` | Fig E.2(b)(c) + `section5.1/trmg/tvfemdresults_fujian.xlsx` |
+| `section5.1/evaluation_metrics_values.ipynb` | Run all cells | `section5.1/*f.xlsx` + `section5.1/actualf.xlsx` | Table F.1 (all metrics except CS)                           |
+| `section5.1/constraint_score_fujian.xlsx` | Read **cell AN1** (highlighted in yellow) | Pre-computed | Table F.1 (CS score)                                        |
 
 > **Note on QS (MW) score in Table F.1:** Same as Table 5 — the QS metric corresponds to pinball loss. The relevant cells are labelled *"Probability prediction: Pinball loss (QS in Table F.1)"* in `section5.1/evaluation_metrics_values.ipynb`.
 
@@ -379,52 +388,67 @@ cp section4/trmg/trmg.xlsx results/trmg.xlsx
 
 ### Section 4.2 — Decomposition and Reconstruction (`data/preprocessing.ipynb`, TenneT dataset section)
 
-> Signal decomposition is performed entirely in Python. The entropy-based IMF reconstruction step (selecting and summing IMF components by entropy range) is performed manually in Excel. The resulting CSV files are listed in the Data Output column below.
+> Signal decomposition is performed entirely in Python. The entropy-based IMF reconstruction step (selecting and summing IMF components by entropy range) is performed manually in Excel formulas. The resulting XLSX files are listed in the Data Output column below.
 
-| Paper Output | Cell label (annotated in notebook)                             | Input | Data Output                                                                                                                    |
-|-------------|----------------------------------------------------------------|-------|--------------------------------------------------------------------------------------------------------------------------------|
-| Fig 3(a) TVFEMD | *"TVFEMD + R2CMSE"*: `# Figure 3(a): plot TVFEMD results`      | `data/tennet/time_series_15min_singleindex_filtered.csv` | `section4/trmg/tvfemdresults_TenneT.csv`                                                                                       |
-| Fig 3(b)(c) R2CMSE | *"TVFEMD + R2CMSE"*: `# 4.2 R2CMSE: load TVFEMD results`       | `section4/trmg/tvfemdresults_TenneT.csv` | `section4/trmg/imfreconstruction_TenneT.csv`(TRMG,TRQG,TRMG1L,TRQ1G)                                                           |
-| WRGG: Appendix D Table D.1 | *"WT + R2CMSE"*: `WT decomposition` and `R2CMSE results`   | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/wt_decomposition_results.csv`, <br/>Reconstruction:`section4/wrgg/wt_decomposition_results.csv` |
-| VRLG: Appendix D Table D.2 | *"VMD + R2CMSE"*: `VMD decomposition` and `R2CMSE results` | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/vmd_decomposition_results.csv`, <br/>Reconstruction:`section4/vrlg/vmd_reconstruction.csv`      |
-| ERMG: Appendix D Table D.3 | *"EMD + R2CMSE"*: `EMD decomposition` and `R2CMSE results` | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/emdresults.csv`, <br/>Reconstruction:`section4/ermg/emdreconstruction.csv`                      |
-| TSMG: Appendix D Table D.4 | *"TVFEMD + SE"*: all cells                                     | `data/tennet/tvfemdresults_TenneT.csv` | <br/>Decompositon:`data/tennet/wt_decomposition_results.csv`,<br/>Reconstruction:`section4/tsmg/sereconstruction.csv`          |
+| Paper Output | Cell label (annotated in notebook)                             | Input | Data Output                                                                                                                     |
+|-------------|----------------------------------------------------------------|-------|---------------------------------------------------------------------------------------------------------------------------------|
+| Fig 3(a) TVFEMD | *"TVFEMD + R2CMSE"*: `# Figure 3(a): plot TVFEMD results`      | `data/tennet/time_series_15min_singleindex_filtered.csv` | `section4/trmg/tvfemdresults_TenneT.xlsx`                                                                                       |
+| Fig 3(b)(c) R2CMSE | *"TVFEMD + R2CMSE"*: `# 4.2 R2CMSE: load TVFEMD results`       | `section4/trmg/tvfemdresults_TenneT.csv` | `section4/trmg/imfreconstruction_TenneT.xlsx`(TRMG,TRQG,TRMG1L,TRQ1G)                                                           |
+| WRGG: Appendix D Table D.1 | *"WT + R2CMSE"*: `WT decomposition` and `R2CMSE results`   | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/wt_decomposition_results.csv`, <br/>Reconstruction:`section4/wrgg/wt_decomposition_results.xlsx` |
+| VRLG: Appendix D Table D.2 | *"VMD + R2CMSE"*: `VMD decomposition` and `R2CMSE results` | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/vmd_decomposition_results.csv`, <br/>Reconstruction:`section4/vrlg/vmd_reconstruction.xlsx`      |
+| ERMG: Appendix D Table D.3 | *"EMD + R2CMSE"*: `EMD decomposition` and `R2CMSE results` | `data/tennet/time_series_15min_singleindex_filtered.csv` | <br/>Decompositon:`data/tennet/emdresults.csv`, <br/>Reconstruction:`section4/ermg/emdreconstruction.xlsx`                      |
+| TSMG: Appendix D Table D.4 | *"TVFEMD + SE"*: all cells                                     | `data/tennet/tvfemdresults_TenneT.csv` | <br/>Decompositon:`data/tennet/wt_decomposition_results.csv`,<br/>Reconstruction:`section4/tsmg/sereconstruction.xlsx`          |
 
+> **How sub1–sub5 are formed (for Tables D.1–D.4 and Figure 3(c)):**
+> The sub-components do **not** represent individual R2CMSE values. Instead, IMF 
+> components with similar R2CMSE values are **grouped and summed** based on the 
+> entropy-range reconstruction principle described in the manuscript.
+
+For example, The grouping logic of TRMG is as follows:
+IMF1,8–11 (≈0.500) → sub1; IMF2–4 (≈0.650) → sub2; IMF5–7 (≈0.580) → sub3;
+IMF12–14 (0.2–0.3) → sub4; residual → sub5.
+The resulting sub-component time series are the **column-wise sums** of the corresponding IMF columns in the reconstruction XLSX files. These summation 
+formulas are explicitly shown via Excel cell formulas in the accompanying Excel files for full transparency and auditability.
 ---
 
 ### Section 4.3 — Model Training (Table 4)
 
-> Pre-computed outputs already exist in `results/`. Run training only for full replication (Options B/C).
+> **AUDIT NOTE — Table 4 (Verification via log files, not code execution):**
+> Under Option A, Table 4 hyperparameter values **cannot be reproduced by running code**, 
+> because Option A uses pre-computed prediction files and does not involve model retraining. 
+> Instead, Table 4 can be **verified** by inspecting the JSON log files in each model's subfolder under `section4/`.
 
-| Model | Script | Input CSV | Output (in `results/`) | Hyperparameter log |
-|-------|--------|-----------|------------------------|-------------------|
-| TRMG (proposed) | `section4/trmg/trmg.py` | `section4/trmg/imfreconstruction_TenneT.csv` | `trmg.xlsx` | `section4/trmg/trmg1-5_results.json` |
-| TRQG | `section4/trqg/trqg.py` | `section4/trqg/imfreconstruction_TenneT.csv` | `trqg.xlsx` | `section4/trqg/trqg1-5_results.json` |
-| WRGG | `section4/wrgg/wtgru.py` | `section4/wrgg/wt_decomposition_results.csv` | `wrgg.xlsx` | `section4/wrgg/wtgru1-5_results.json` |
-| VRLG | `section4/vrlg/vmdlstm.py` | `section4/vrlg/vmd_reconstruction.csv` | `vrlg.xlsx` | `section4/vrlg/qrlstm1-5_results.json` |
-| ERMG | `section4/ermg/ermg.py` | `section4/ermg/emdreconstruction.csv` | `ermg.xlsx` | `section4/ermg/ermg1-5_results.json` |
-| TSMG | `section4/tsmg/tsmg.py` | `section4/tsmg/sereconstruction.csv` | `tsmg.xlsx` | `section4/tsmg/tsmg1-4_results.json` |
-| QRNN2G | `section4/qrnn2/qr2nn.py` | `data/tennet/time_series_15min_singleindex_filtered.csv` | `qrnn2pred.xlsx` | `section4/qrnn2/optimization_results.json` |
-| MCQRNNG | `section4/mcqrnn/mcqrnn.py` | `data/tennet/time_series_15min_singleindex_filtered.csv` | `mcqrnn2pred.xlsx` | `section4/mcqrnn/optimization_results.json` |
-| QRFG | `section4/qrf/qrfprediction.ipynb` | `data/tennet/time_series_15min_singleindex_filtered.csv` | `predqrf.xlsx` | `section4/qrf/optuna_qrf_results.json` |
-| QRLASSOG | `section4/qrlasso/qrlasso.ipynb` | `data/tennet/time_series_15min_singleindex_filtered.csv` | `lassopred.xlsx` | `section4/qrlasso/optuna_lasso_results.json` |
 
-> .json files stored hyperparameter results, execution time, and training/validation/test loss.
+> Hyperparameter logs can be obtained by: choosing MODE= 'C' for .py files and option C cells for .ipynb files.
 
 > **Multi-run models:** Each decomposition-based model (TRMG, TRQG, WRGG, VRLG, ERMG, TSMG) is trained 5 times — once per reconstructed IMF component (e.g., `trmg1.xlsx` to `trmg5.xlsx`), except TSMG (4 runs). The final `results/trmg.xlsx` is the **sum** of these individual run outputs.
+
+| Model | Files to run                       | Input CSV | Output (in `results/`) | Best hyperparameters log                     |
+|-------|------------------------------------|-----------|------------------------|----------------------------------------------|
+| TRMG (proposed) | `section4/trmg/trmg.py`            | `section4/trmg/imfreconstruction_TenneT.xlsx` | `trmg.xlsx` | `section4/trmg/trmg1-5_results.json`         |
+| TRQG | `section4/trqg/trqg.py`            | `section4/trqg/imfreconstruction_TenneT.xlsx` | `trqg.xlsx` | `section4/trqg/trqg1-5_results.json`         |
+| WRGG | `section4/wrgg/wtgru.py`           | `section4/wrgg/wt_decomposition_results.xlsx` | `wrgg.xlsx` | `section4/wrgg/wtgru1-5_results.json`        |
+| VRLG | `section4/vrlg/vmdlstm.py`         | `section4/vrlg/vmd_reconstruction.xlsx` | `vrlg.xlsx` | `section4/vrlg/qrlstm1-5_results.json`       |
+| ERMG | `section4/ermg/ermg.py`            | `section4/ermg/emdreconstruction.xlsx` | `ermg.xlsx` | `section4/ermg/ermg1-5_results.json`         |
+| TSMG | `section4/tsmg/tsmg.py`            | `section4/tsmg/sereconstruction.xlsx` | `tsmg.xlsx` | `section4/tsmg/tsmg1-4_results.json`         |
+| QRNN2G | `section4/qrnn2/qr2nn.py`          | `data/tennet/time_series_15min_singleindex_filtered.csv` | `qrnn2pred.xlsx` | `section4/qrnn2/optimization_results.json`   |
+| MCQRNNG | `section4/mcqrnn/mcqrnn.py`        | `data/tennet/time_series_15min_singleindex_filtered.csv` | `mcqrnn2pred.xlsx` | `section4/mcqrnn/optimization_results.json`  |
+| QRFG | `section4/qrf/qrfprediction.ipynb` | `data/tennet/time_series_15min_singleindex_filtered.csv` | `predqrf.xlsx` | `section4/qrf/optuna_qrf_results.json`       |
+| QRLASSOG | `section4/qrlasso/qrlasso.ipynb`   | `data/tennet/time_series_15min_singleindex_filtered.csv` | `lassopred.xlsx` | `section4/qrlasso/optuna_lasso_results.json` |
+
 
 ---
 
 ### Section 4.4 — Evaluation Results
 
-| Paper Output | Script | Cell / Action | Input |
-|-------------|--------|--------------|-------|
-| Table 5 (all metrics except CS) | `results/evaluation_metrics_values.ipynb` | Run all cells; select each model `.xlsx` from `results/` | `results/*.xlsx` + `results/actual.xlsx` |
-| Table 5 (CS score) | `results/constraint_score_calculation.xlsx` | Open file; read **cell AN1** (yellow highlight) per model sheet | Pre-computed in Excel |
-| Table 5 (QS/MW score) | `results/evaluation_metrics_values.ipynb` | Cells labelled *"Probability prediction: Pinball loss (QS in Table 5)"* | `results/*.xlsx` + `results/actual.xlsx` |
-| Fig 4 (point prediction) | `results/plot_point.ipynb` | Run all cells | `results/point_at_tau=0.5.xlsx` |
-| Fig 5 (interval prediction) | `results/plot_interval.ipynb` | Run all cells | `results/*.xlsx` + `results/actual.xlsx` |
-| Fig 6 (KDE density) | `results/kdeplot.ipynb` | *"KDE plot"* cells | `results/kde_restructured.xlsx` |
+| Paper Output | Script | Cell / Action | Input                                         |
+|-------------|--------|--------------|-----------------------------------------------|
+| Table 5 (all metrics except CS) | `results/evaluation_metrics_values.ipynb` | Run all cells; select each model `.xlsx` from `results/` | `results/*.xlsx` + `results/actual.xlsx`      |
+| Table 5 (CS score) | `results/constraint_score_calculation.xlsx` | Open file; read **cell AN1** (yellow highlight) per model sheet | Calculation process were listed in all sheets |
+| Table 5 (QS/MW score) | `results/evaluation_metrics_values.ipynb` | Cells labelled *"Probability prediction: Pinball loss (QS in Table 5)"* | `results/*.xlsx` + `results/actual.xlsx`      |
+| Fig 4 (point prediction) | `results/plot_point.ipynb` | Run all cells | `results/point_at_tau=0.5.xlsx`               |
+| Fig 5 (interval prediction) | `results/plot_interval.ipynb` | Run all cells | `results/*.xlsx` + `results/actual.xlsx`      |
+| Fig 6 (KDE density) | `results/kdeplot.ipynb` | *"KDE plot"* cells | `results/kde_restructured.xlsx`               |
 
 > How to obtain `results/kde_restructured.xlsx`: input `results/cs_plot.xlsx`, run `Data extraction` cells in `results/kdeplot.ipynb`.
 
@@ -432,7 +456,7 @@ cp section4/trmg/trmg.xlsx results/trmg.xlsx
 
 ### Section 5.1 — Fujian Dataset
 
-> **Note**: Due to file corruption during package preparation, individual component prediction files for Section 5.1 are unavailable. However, the aggregated prediction outputs (section5.1/f.xlsx) are intact and sufficient to reproduce all reported metrics in Tables F.1 and Figure E. The aggregation was performed by summing component predictions.The aggregated prediction files were generated and saved prior to file corruption, and their integrity was verified by comparing the reported metrics in Table F.1 against those computed from the archived files, which match exactly.
+> Note on Fujian per-component files: The individual per-component prediction files for the Fujian dataset are unavailable due to file corruption that occurred after the original experiments were completed. The final aggregated prediction files (section5.1/*f.xlsx) are fully intact and sufficient to reproduce all results in Table F.1 and Figure E.2 via Option A. The integrity of these aggregated files has been verified by recomputing all reported metrics from the archived files, which match exactly.
 
 | Output                                                                                                               | Script | Cell label                                                                | Input                                               |
 |----------------------------------------------------------------------------------------------------------------------|--------|---------------------------------------------------------------------------|-----------------------------------------------------|
@@ -441,14 +465,16 @@ cp section4/trmg/trmg.xlsx results/trmg.xlsx
 | Fig E.1(a)                                                                                                           | `data/fujian/detection.ipynb` | *"Heatmap for Fig E.1(a) in Outlier detection"*                           | `data/fujian/data_fujian.xlsx`                      |
 | Fig E.1(b)                                                                                                           | `data/fujian/detection.ipynb` | *"RANSAC fit in Fig E.1(b) in Outlier detection"*                         | `data/fujian/data_fujian.xlsx`                      |
 | Fig E.2(a)                                                                                                           | `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section)                              | `data/fujian/res_new.csv`                           |
-| Fig E.2(b)(c),<br/>Decompositon:`data/fujian/tvfemd_fujian.csv`,<br/>Reconstruction:`section5.1/trmg/tvfemdresults_fujian.csv` | `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section)                              | `section5.1/trmg/tvfemd_fujian.csv` (also for TRQG) |
-| <br/>Decompositon:`data/fujian/vmd_fujian.csv`, <br/>Reconstruction:`section5.1/trmg/vmd_decomposition_fujian.csv`             | `data/preprocessing.ipynb` | *"VMD + R2CMSE"* (Fujian dataset section)                                 | `data/fujian/res_new.csv`                           |
-| <br/>Decompositon:`data/fujian/wt_fujian.csv`,<br/>Reconstruction:`section5.1/trmg/wt_decomposition_fujian.csv`                | `data/preprocessing.ipynb` | *"WT + R2CMSE"* (Fujian dataset section)                                  | `data/fujian/res_new.csv`                           |
-| <br/>Decompositon:`data/fujian/emdf.csv`,<br/>Reconstruction:`section5.1/ermg/emdfujian.csv`                                   | `data/preprocessing.ipynb` | *"EMD + R2CMSE"* (Fujian dataset section)                                 | `data/fujian/res_new.csv`                           |
-| <br/>Decompositon:`data/fujian/tvfemd_fujian.csv`,<br/>Reconstruction:`section5.1/tsmg/tsmg_fujian.csv`                        | `data/preprocessing.ipynb` | *"TVFEMD + SE"* (Fujian dataset section)                                  | `data/fujian/res_new.csv`                           |
+| Fig E.2(b)(c),<br/>Decompositon:`data/fujian/tvfemd_fujian.csv`,<br/>Reconstruction:`section5.1/trmg/tvfemdresults_fujian.xlsx` | `data/preprocessing.ipynb` | *"TVFEMD + R2CMSE"* (Fujian dataset section)                              | `section5.1/trmg/tvfemd_fujian.csv` (also for TRQG) |
+| <br/>Decompositon:`data/fujian/vmd_fujian.csv`, <br/>Reconstruction:`section5.1/trmg/vmd_decomposition_fujian.xlsx`             | `data/preprocessing.ipynb` | *"VMD + R2CMSE"* (Fujian dataset section)                                 | `data/fujian/res_new.csv`                           |
+| <br/>Decompositon:`data/fujian/wt_fujian.csv`,<br/>Reconstruction:`section5.1/trmg/wt_decomposition_fujian.xlsx`                | `data/preprocessing.ipynb` | *"WT + R2CMSE"* (Fujian dataset section)                                  | `data/fujian/res_new.csv`                           |
+| <br/>Decompositon:`data/fujian/emdf.csv`,<br/>Reconstruction:`section5.1/ermg/emdfujian.xlsx`                                   | `data/preprocessing.ipynb` | *"EMD + R2CMSE"* (Fujian dataset section)                                 | `data/fujian/res_new.csv`                           |
+| <br/>Decompositon:`data/fujian/tvfemd_fujian.csv`,<br/>Reconstruction:`section5.1/tsmg/tsmg_fujian.xlsx`                        | `data/preprocessing.ipynb` | *"TVFEMD + SE"* (Fujian dataset section)                                  | `data/fujian/res_new.csv`                           |
 | Table F.1 (all metrics except CS)                                                                                    | `section5.1/evaluation_metrics_values.ipynb` | Run all cells                                                             | `section5.1/*f.xlsx` + `section5.1/actualf.xlsx`    |
 | Table F.1 (CS score)                                                                                                 | `section5.1/constraint_score_fujian.xlsx` | Read **cell AN1** (yellow highlight) per model sheet                      | Pre-computed in Excel                               |
 | Table F.1 (QS/MW score)                                                                                              | `section5.1/evaluation_metrics_values.ipynb` | Cells labelled *"Probability prediction: Pinball loss (QS in Table F.1)"* | `section5.1/*f.xlsx` + `section5.1/actualf.xlsx`    |
+
+> Signal decomposition is performed entirely in Python. The entropy-based IMF reconstruction step (selecting and summing IMF components by entropy range) is performed manually in Excel formulas. The resulting XLSX files are listed in the Data Output column below.
 
 > Model training for the Fujian dataset follows the same structure as Section 4.3. Reconstruction results for hybrid baselines are shown at the bottom of `data/preprocessing.ipynb` (Fujian dataset section, markdown format).
 
@@ -478,38 +504,48 @@ cp section4/trmg/trmg.xlsx results/trmg.xlsx
 
 ### Section 5.4 — Sensitivity Analysis
 
-| Parameter | Paper output | Script / location | Output |
-|-----------|-------------|------------------|--------|
-| TVFEMD `thresh_bwr` | Table 9 | *"TVFEMD + R2CMSE"* cell in `data/preprocessing.ipynb` (TenneT section); see `# Table 9 Summary` block | CSV files in `section5.4/section5.4.1/` |
-| R2CMSE `tau` | Table 10 | Same cell; see `# Sensitivity results for R2CMSE Table 10 saved` block | `r2cmse_tau_sensitivity.csv` in `section5.4/section5.4.2/` |
-| MCQRNN hidden layers | Table 11 (Sensitivity column) | `section5.4/section5.4.3/trmg1l.py` | `trmg1_single1-5.xlsx`; sum → `results/trmg1l.xlsx`; log: `trmg1-5_single_hidden_results.json` |
+| Parameter            | Paper output | Script / location                                                                                 | Output |
+|----------------------|-------------|---------------------------------------------------------------------------------------------------|--------|
+| TVFEMD `thresh_bwr`  | Table 9 | *"TVFEMD + R2CMSE"* cell in `data/preprocessing.ipynb` (TenneT section); see `# Table 9 Summary` block | CSV files in `section5.4/section5.4.1/` |
+| R2CMSE `tau`         | Table 10 | Same cell; see `# Sensitivity results for R2CMSE Table 10 saved` block                            | `r2cmse_tau_sensitivity.csv` in `section5.4/section5.4.2/` |
+| MCQRNN hidden layers | Table 11 (Sensitivity column) | `section5.4/section5.4.3/trmg1l.py`,same input as TRMG                                            | `trmg1_single1-5.xlsx`; sum → `results/trmg1l.xlsx`; log: `trmg1-5_single_hidden_results.json` |
 
 ---
 
 ### Section 5.5 — Ablation Study (Table 11, Ablation Column)
 
-| Model | Script | Input | Output | Log |
-|-------|--------|-------|--------|-----|
-| TFMG (no R2CMSE) | `section5.5/tfmg/tfmg.py` | `section5.5/tfmg/fuzzy.csv` | `results/tfmg.xlsx` | `section5.5/tfmg/tfmg1-5_results.json` |
-| TRQ1G (1-hidden QRNN) | `section5.5/trq1g/trq1g.py` | `section5.5/trq1g/imfreconstruction_TenneT.csv` | `results/trqg1.xlsx` | `section5.5/trq1g/trq1g1-5_results.json` |
+| Model | Script | Input                                            | Output | Log |
+|-------|--------|--------------------------------------------------|--------|-----|
+| TFMG (no R2CMSE) | `section5.5/tfmg/tfmg.py` | `section5.5/tfmg/fuzzy.xlsx`                     | `results/tfmg.xlsx` | `section5.5/tfmg/tfmg1-5_results.json` |
+| TRQ1G (1-hidden QRNN) | `section5.5/trq1g/trq1g.py` | `section5.5/trq1g/imfreconstruction_TenneT.xlsx` | `results/trqg1.xlsx` | `section5.5/trq1g/trq1g1-5_results.json` |
 
 > To reproduce Table 11 (Ablation column): uncomment the `tfmg` and `trq1g` loading lines in `results/evaluation_metrics_values.ipynb` and run all cells.
 
 ---
 
 ## 7. Reproducibility Statement
+Option A is the designated and complete audit pathway. All prediction outputs archived in `data/`, `results/`, 
+and `section5.1/` were generated in the original experimental environment and have been verified to reproduce all reported metrics in Tables 4–11 and Appendix Tables C.1–F.1 exactly.
+On GPU-based retraining (Options B and C): The deep learning models use 
+`random_normal` weight initialization compiled with `@tf.function` over 1,000 
+training epochs. Even with a fixed random seed (`seed=42`) and 
+`TF_DETERMINISTIC_OPS=1`, bit-identical reproduction across different hardware 
+environments is not achievable due to two well-documented sources of non-determinism 
+in GPU-accelerated deep learning:
 
-Option A is the designated and complete audit pathway. All prediction outputs archived in data/,results/, and section 5.1/ were generated in the original experimental environment and have been verified to reproduce all reported metrics in Tables 4–11 and Appendix Tables C.1–F.1 exactly.
+- **CUDA/cuDNN version-dependent RNG sequences:** affect weight initialization 
+  even under a fixed seed.
+- **Non-associative floating-point accumulation:** in GPU-parallelized gradient 
+  computation, produces diverging gradients across platforms after many training 
+  iterations.
 
-On GPU-based retraining (Options B and C): The deep learning models use random_normal weight initialization compiled with @tf.function over 1,000 training epochs. Even with a fixed random seed (seed=42) and TF_DETERMINISTIC_OPS=1, bit-identical reproduction across different hardware or different time (same hardware) environments are not achievable due to two well-documented sources of non-determinism in GPU-accelerated deep learning:
-
-CUDA/cuDNN version-dependent random number generation sequences, which affect weight initialization even under a fixed seed.
-Non-associative floating-point accumulation in GPU-parallelized gradient computation, which produces diverging gradients across platforms after many training iterations.These are acknowledged limitations of TensorFlow on GPU hardware. See:
+These are acknowledged limitations of TensorFlow on GPU hardware. See:
 - [PyTorch reproducibility docs](https://pytorch.org/docs/stable/notes/randomness.html)
 - [TensorFlow determinism docs](https://github.com/mm3509/reproducibility/blob/master/tensorflow-reproducibility.md)
 - [Sources of Irreproducibility in Machine Learning](https://arxiv.org/pdf/2204.07610), Gundersen et al. (2022).
 
-Options B and C are provided for methodological transparency only and are explicitly not recommended for audit purposes (longer time consumption).
+Options B and C are provided for methodological transparency only and are explicitly 
+not recommended for audit purposes (longer time consumption).
 
 ---
 
